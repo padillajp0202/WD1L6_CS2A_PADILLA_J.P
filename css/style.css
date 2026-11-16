@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles for section headings */
+.section-title {
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Blue underline under titles */
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #0d6efd;
+}
+
+/* Round profile photo */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid #fff;
+}
+
+/* Smaller photo on mobile */
+@media (max-width: 576px) {
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Card hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+.project-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* White circle with black arrow */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  filter: invert(1) grayscale(100);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Arrow zoom on hover */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.contact-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Link turns blue and lifts on hover */
+.contact-link:hover {
+  color: #0d6efd !important;
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
